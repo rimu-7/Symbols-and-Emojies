@@ -234,18 +234,18 @@ const EmojiList = () => {
                   {items.map((emoji) => (
                     <div
                       key={emoji.slug}
-                      className="flex w-12 h-12 justify-center items-center relative group p-6 md:p-8 rounded-2xl bg-white hover:bg-green-100 hover:border-green-400 shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 text-center cursor-pointer"
+                      className="flex w-12 h-12  justify-center items-center relative group p-6 md:p-8 rounded-2xl bg-white hover:bg-green-100 hover:border-green-400 shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 text-center cursor-pointer"
                       onClick={() => handleEmojiClick(emoji.slug)}
                       onMouseEnter={() => handleEmojiMouseEnter(emoji.slug)}
                       onMouseLeave={handleEmojiMouseLeave}
                     >
-                      <div className="text-2xl ">{emoji.character}</div>
+                      <div className="text-2xl hover:scale-130 duration-300 ease-in-out ">{emoji.character}</div>
                       {/* Tooltip */}
                       {activeTooltip === emoji.slug && (
                         <div
                           className={`absolute ${
                             isMobile ? "" : ""
-                          } top-full left-1/2 transform -translate-x-1/2 w-36 z-50`}
+                          } top-full left-1/2  transform -translate-x-1/2 w-36 z-50`}
                           onClick={(e) => e.stopPropagation()}
                         >
                           <div className="bg-green-50 text-center text-gray-800 text-sm rounded-lg py-3 px-2 shadow-xl border border-gray-100 flex flex-col items-center">

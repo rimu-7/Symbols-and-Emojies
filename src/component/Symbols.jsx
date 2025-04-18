@@ -79,16 +79,16 @@ const Symbols = ({ selectedCategory, searchQuery }) => {
                       }
                     >
                       <button
-                        className={`border-2 w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-200 
+                        className={`border-2  w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-200 
                           ${
                             activeButton === item.id || copiedId === item.id
-                              ? "bg-green-200 border-green-400 scale-110 shadow-md"
-                              : "bg-white border-gray-300 hover:scale-110 hover:bg-green-100 hover:border-green-300"
+                              ? "bg-green-200 border-green-400  shadow-md"
+                              : "bg-white border-gray-300  hover:bg-green-100 hover:border-green-300"
                           } cursor-pointer shadow-sm`}
                         onClick={() => handleSymbolPress(item.id)}
                         aria-label={`Show options for ${item.name}`}
                       >
-                        <span className="text-2xl text-gray-700">
+                        <span className="text-2xl hover:scale-130 duration-300 ease-in-out text-gray-700">
                           {item.symbol}
                         </span>
                       </button>
