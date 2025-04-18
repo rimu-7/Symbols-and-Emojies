@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import App from "../App";
 import Home from "../component/Home";
+import EmojiList from "../component/EmojiList";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/emoji",
+        element: <EmojiList />,
       },
     ],
   },
