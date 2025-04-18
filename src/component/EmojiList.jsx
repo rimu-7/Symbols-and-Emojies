@@ -195,7 +195,7 @@ const EmojiList = () => {
 
           {/* Category List */}
           <div className="mt-6 ">
-            <h3 className="text-lg font-semibold mb-3 text-green-800">
+            <h3 className="text-lg font-semibold mb-3 ">
               Categories
             </h3>
             <div className="space-y-2">
@@ -203,7 +203,7 @@ const EmojiList = () => {
                 <div
                   key={category}
                   onClick={() => handleCategoryClick(category)}
-                  className={`p-3 rounded-lg cursor-pointer  transition-colors duration-200 ${
+                  className={`p-3 rounded-lg cursor-pointer capitalize  transition-colors duration-200 ${
                     activeCategory === category
                       ? "bg-green-400 text-black "
                       : "bg-green-200 hover:bg-green-300"
@@ -221,13 +221,13 @@ const EmojiList = () => {
       <div className="flex-1 justify-center items-center p-4 md:p-6 overflow-y-auto">
         <div className="max-h-screen overflow-y-auto">
           {loading ? (
-            <p className="text-center text-gray-600 text-lg">
+            <p className="text-center capitalize text-gray-600 text-lg">
               Loading emojis...
             </p>
           ) : (
             Object.entries(filteredGroupedEmojis).map(([category, items]) => (
               <div key={category} className="mb-12 ">
-                <h2 className="text-3xl font-bold text-center text-green-700 mb-6 pb-2">
+                <h2 className="text-3xl font-bold text-center capitalize mb-6 pb-2">
                   {category}
                 </h2>
                 <div className="grid px-10 grid-cols-4 sm:grid-cols-6 md:grid-cols-10 lg:grid-cols-10 gap-4">
